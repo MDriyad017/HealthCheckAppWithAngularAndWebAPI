@@ -1,4 +1,6 @@
 global using HealthCheckApp.Server.Class;
+using HealthCheckApp.Server.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,11 +10,13 @@ builder.Services.AddHealthChecks()
     .AddCheck("ICMP_02", new ICMPHealthCheck("www.google.com", 100))
     .AddCheck("ICMP_03", new ICMPHealthCheck($"www.{Guid.NewGuid():N}.com", 100));
 
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ApplicationDbContext>(opt => 
+        opt.UseSqlServer(builder.Configuration.GetConnectionString("appCon")));
 
 var app = builder.Build();
 

@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { WorldCitysComponent } from './world-citys/world-citys.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HomeComponent,
     FetchDataComponent,
     NavMenuComponent,
-    HealthCheckComponent
+    HealthCheckComponent,
+    WorldCitysComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

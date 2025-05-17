@@ -8,6 +8,9 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\healthcheckapp.client\</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="src\app\world-cities\1twzzk2f.3v5~" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="src\assets\Img\" />
   </ItemGroup>
 </Project>

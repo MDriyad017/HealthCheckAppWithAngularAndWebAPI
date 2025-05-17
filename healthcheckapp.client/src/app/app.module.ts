@@ -9,10 +9,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HealthCheckComponent } from './health-check/health-check.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { WorldCitysComponent } from './world-citys/world-citys.component';
+import { WorldCitiesComponent } from './world-cities/world-cities.component';
+import { AngularMaterialModule } from './angular-material.module';
+
 
 @NgModule({
   declarations: [
@@ -21,15 +20,13 @@ import { WorldCitysComponent } from './world-citys/world-citys.component';
     FetchDataComponent,
     NavMenuComponent,
     HealthCheckComponent,
-    WorldCitysComponent
+    WorldCitiesComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

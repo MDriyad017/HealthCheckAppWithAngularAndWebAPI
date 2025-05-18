@@ -4,7 +4,7 @@
 
 <mat-form-field [hidden]="!cities">
   <input matInput #filter (keyup)="loadData(filter.value)"
-         placeholder="Filter by name (or part of it)...">
+         placeholder="search by city name">
 </mat-form-field>
 
 <table mat-table [dataSource]="cities"

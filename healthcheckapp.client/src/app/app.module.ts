@@ -11,6 +11,7 @@ import { HealthCheckComponent } from './health-check/health-check.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorldCitiesComponent } from './world-cities/world-cities.component';
 import { AngularMaterialModule } from './angular-material.module';
+import { WorldCountriesComponent } from './world-countries/world-countries.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AngularMaterialModule } from './angular-material.module';
     FetchDataComponent,
     NavMenuComponent,
     HealthCheckComponent,
-    WorldCitiesComponent
+    WorldCitiesComponent,
+    WorldCountriesComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

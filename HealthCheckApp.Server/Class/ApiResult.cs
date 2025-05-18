@@ -58,9 +58,7 @@ namespace HealthCheckApp.Server.Class
         /// Checks if the given property name exists
         /// to protect against SQL injection attacks
         /// </summary>
-        public static bool IsValidProperty(
-        string propertyName,
-        bool throwExceptionIfNotFound = true)
+        public static bool IsValidProperty(string propertyName, bool throwExceptionIfNotFound = true)
         {
             var prop = typeof(T).GetProperty(
             propertyName,

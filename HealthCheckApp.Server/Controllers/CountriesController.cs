@@ -22,9 +22,14 @@ namespace HealthCheckApp.Server.Controllers
 
         // GET: api/Countries
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Country>>> GetCountries()
+        public async Task<ActionResult<ApiResult<Country>>> GetCountries(int pageIndex = 0, int pageSize = 10, string? filterColumn = null, string? filterQuery = null)
         {
-            return await _context.Countries.ToListAsync();
+            var result = await ApiResult<Country>.CreateAsync(
+                    _context.Countries.AsNoTracking().OrderBy(x => x.Name),
+                     pageIndex, pageSize, filterColumn, filterQuery
+                );
+
+            return result;
         }
 
         // GET: api/Countries/5

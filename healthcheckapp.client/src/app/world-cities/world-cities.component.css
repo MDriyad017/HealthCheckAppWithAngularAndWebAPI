@@ -2,3 +2,9 @@ mat-form-field {
   font-size: 14px;
   width: 100%;
 }
+.mat-column-name a {
+  text-decoration: none;
+}
+.btn-add {
+  float: right;
+}

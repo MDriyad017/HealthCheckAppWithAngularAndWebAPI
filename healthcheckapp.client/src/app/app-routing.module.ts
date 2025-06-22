@@ -5,13 +5,17 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HealthCheckComponent } from './health-check/health-check.component';
 import { WorldCitiesComponent } from './world-cities/world-cities.component';
 import { WorldCountriesComponent } from './world-countries/world-countries.component';
+import { CityEditComponent } from './world-cities/city-edit.component';
+
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, pathMatch: 'full'},
-  {path: 'fetch-data', component: FetchDataComponent},
-  {path: 'health-check', component: HealthCheckComponent},
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'fetch-data', component: FetchDataComponent },
+  { path: 'health-check', component: HealthCheckComponent },
   { path: 'world-cities', component: WorldCitiesComponent },
-  { path: 'world-countries', component: WorldCountriesComponent }
+  { path: 'world-countries', component: WorldCountriesComponent },
+  { path: 'city/:id', component: CityEditComponent },
+  { path: 'city', component: CityEditComponent}
 ];
 
 @NgModule({

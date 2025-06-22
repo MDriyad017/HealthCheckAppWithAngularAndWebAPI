@@ -12,7 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorldCitiesComponent } from './world-cities/world-cities.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { WorldCountriesComponent } from './world-countries/world-countries.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { CityEditComponent } from './world-cities/city-edit.component'
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { WorldCountriesComponent } from './world-countries/world-countries.compo
     NavMenuComponent,
     HealthCheckComponent,
     WorldCitiesComponent,
-    WorldCountriesComponent
+    WorldCountriesComponent,
+    CityEditComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

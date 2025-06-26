@@ -23,7 +23,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
         opt.UseSqlServer(builder.Configuration.GetConnectionString("appCon")));
 
 
-
 var app = builder.Build();
 
 app.UseDefaultFiles();
